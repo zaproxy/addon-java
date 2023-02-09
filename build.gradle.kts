@@ -4,7 +4,7 @@ import org.zaproxy.gradle.addon.misc.ConvertMarkdownToHtml
 plugins {
     `java-library`
     id("org.zaproxy.add-on") version "0.8.0"
-    id("com.diffplug.spotless") version "6.11.0"
+    id("com.diffplug.spotless") version "6.14.1"
 }
 
 repositories {
@@ -16,7 +16,7 @@ description = "A template for a 3rd party ZAP Java add-on."
 zapAddOn {
     addOnId.set("addonjava")
     addOnName.set("A Template Java Add-on")
-    zapVersion.set("2.11.1")
+    zapVersion.set("2.12.0")
     addOnStatus.set(AddOnStatus.ALPHA)
 
     releaseLink.set("https://github.com/youruser/javaexample/compare/v@PREVIOUS_VERSION@...v@CURRENT_VERSION@")
