@@ -35,6 +35,7 @@ public class SimpleExampleAPI extends ApiImplementor {
 
     private static final Logger LOGGER = LogManager.getLogger(SimpleExampleAPI.class);
 
+    @SuppressWarnings("this-escape")
     public SimpleExampleAPI() {
         this.addApiAction(new ApiAction(ACTION_HELLO_WORLD));
     }
