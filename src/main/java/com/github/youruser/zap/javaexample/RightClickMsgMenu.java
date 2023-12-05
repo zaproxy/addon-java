@@ -34,6 +34,7 @@ public class RightClickMsgMenu extends PopupMenuItemHttpMessageContainer {
 
     private static final long serialVersionUID = 1L;
 
+    @SuppressWarnings("serial")
     private ExtensionJavaExample extension;
 
     public RightClickMsgMenu(ExtensionJavaExample ext, String label) {

@@ -3,12 +3,9 @@ import org.zaproxy.gradle.addon.misc.ConvertMarkdownToHtml
 
 plugins {
     `java-library`
-    id("org.zaproxy.add-on") version "0.9.0"
-    id("com.diffplug.spotless") version "6.20.0"
-}
-
-repositories {
-    mavenCentral()
+    id("org.zaproxy.add-on") version "0.10.0"
+    id("com.diffplug.spotless")
+    id("org.zaproxy.common")
 }
 
 description = "A template for a 3rd party ZAP Java add-on."
@@ -16,7 +13,7 @@ description = "A template for a 3rd party ZAP Java add-on."
 zapAddOn {
     addOnId.set("addonjava")
     addOnName.set("A Template Java Add-on")
-    zapVersion.set("2.13.0")
+    zapVersion.set("2.14.0")
     addOnStatus.set(AddOnStatus.ALPHA)
 
     releaseLink.set("https://github.com/youruser/javaexample/compare/v@PREVIOUS_VERSION@...v@CURRENT_VERSION@")
@@ -37,12 +34,6 @@ java {
 }
 
 spotless {
-    java {
-        licenseHeaderFile("$rootDir/gradle/spotless/license.java")
-
-        googleJavaFormat("1.17.0").aosp()
-    }
-
     kotlinGradle {
         ktlint()
     }
