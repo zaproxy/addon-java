@@ -24,6 +24,14 @@ zapAddOn {
         url.set("https://www.zaproxy.org/docs/desktop/addons/addonjava/")
         repo.set("https://github.com/zaproxy/addon-java")
         changesFile.set(tasks.named<ConvertMarkdownToHtml>("generateManifestChanges").flatMap { it.html })
+
+        dependencies {
+            addOns {
+                register("commonlib") {
+                    version.set(">= 1.36.0 & < 2.0.0")
+                }
+            }
+        }
     }
 }
 
@@ -37,4 +45,8 @@ spotless {
     kotlinGradle {
         ktlint()
     }
+}
+
+dependencies {
+    compileOnly("org.zaproxy.addon:commonlib:1.36.0")
 }
